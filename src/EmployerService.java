@@ -1,7 +1,7 @@
 public class EmployerService {
     public Employee[] employee = new Employee[10];
 
-    public double totalSum(Employee[] employee) {
+    public double calculateTotalSum(Employee[] employee) {
         double sum = employee[0].getSalary();
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null) {
@@ -11,7 +11,7 @@ public class EmployerService {
         return sum;
     }
 
-    public double minSum(Employee[] employee) {
+    public double calculateMinSum(Employee[] employee) {
         double min = employee[0].getSalary();
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null) {
@@ -23,7 +23,7 @@ public class EmployerService {
         return min;
     }
 
-    public double maxSum(Employee[] employee) {
+    public double calculateMaxSum(Employee[] employee) {
         double max = employee[0].getSalary();
         for (int i = 0; i < employee.length; i++) {
             if (employee[i] != null) {
