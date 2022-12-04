@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) {
+    public static <employee> void main(String[] args) {
 
         EmployerService employerService = new EmployerService();
 
@@ -20,6 +20,8 @@ public class Main {
         System.out.println("Сумма затрат на зарплаты в месяц: " + employerService.calculateTotalSum(employee) + " рублей");
         System.out.println("Сотрудник с минимальной заплатой: " + employerService.calculateMinSum(employee) + " рублей");
         System.out.println("Сотрудник с максимальной заплатой: " + employerService.calculateMaxSum(employee) + " рублей");
-        System.out.println("Среднее значение зарплат: " + employerService.calculateTotalSum(employee)/employee.length + " рублей");
+        System.out.println("Среднее значение зарплат: " + employerService.calculateMiddleSum(employee) + " рублей");
+        employerService.printTitleEmployee(employee);
+
     }
 }

@@ -34,4 +34,22 @@ public class EmployerService {
         }
         return max;
     }
+
+    public double calculateMiddleSum(Employee[] employee) {
+        double middleSum = employee[0].getSalary();
+        for (int i = 0; i < employee.length; i++) {
+            if (employee[i] != null) {
+                middleSum = calculateTotalSum(employee) / employee.length;
+            }
+        }
+        return middleSum;
+    }
+
+    public void printTitleEmployee(Employee[] employee) {
+        for (Employee i : employee) {
+            if (i != null) {
+                System.out.println(i.getId() + ". " + "ФИО: " + i.getEmployeeName());
+            }
+        }
+    }
 }
